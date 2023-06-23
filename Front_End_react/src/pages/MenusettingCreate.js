@@ -13,13 +13,10 @@ function MenusettingCreate() {
     setIsSaving(true);
     axios
       .post(
-        "http://localhost:8080/api/v1/menu/menusetting",
+        "http://localhost:8080/menu-setting",
         {
           menucode: menucode,
           menuname: menuname,
-        },
-        {
-          headers: { Authorization: "Bearer " + user.accessToken },
         }
       )
       .then(function (response) {

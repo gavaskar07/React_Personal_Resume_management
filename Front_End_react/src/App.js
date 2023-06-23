@@ -6,6 +6,7 @@ import AuthService from "./services/auth.service";
 
 import Login from "./components/login.component";
 import Register from "./components/register.component";
+
 import Home from "./components/home";
 // import Profile from "./components/profile.component";
 import BoardUser from "./components/board-user.component";
@@ -51,16 +52,16 @@ import EventBus from "./common/EventBus";
 const user = JSON.parse(localStorage.getItem("user"));
 
 //axios.defaults.headers.common.Authorization = "Bearer " + user.accessToken;
-axios.defaults.baseURL = "http://localhost:8000/api/";
+//axios.defaults.baseURL = "http://localhost:8000/api/";
 if (user) {
-  axios.defaults.headers.common["Authorization"] = "Bearer " + user.accessToken;
-  axios.defaults.headers.common.Authorization = "Bearer " + user.accessToken;
-  Swal.fire({
-    icon: "error",
-    title: user.accessToken,
-    showConfirmButton: false,
-    timer: 1500,
-  });
+ // axios.defaults.headers.common["Authorization"] = "Bearer " + user.accessToken;
+  //axios.defaults.headers.common.Authorization = "Bearer " + user.accessToken;
+ // Swal.fire({
+   // icon: "error",
+    //title: user.accessToken,
+   // showConfirmButton: false,
+   // timer: 1500,
+ // });
 }
 
 class App extends Component {

@@ -12,7 +12,7 @@ function MenusettingView() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/api/v1/menu/menusetting/${id}`)
+      .get('http://localhost:8080/menu-setting/${id}')
       .then(function (response) {
         setMenusetting(response.data);
       })

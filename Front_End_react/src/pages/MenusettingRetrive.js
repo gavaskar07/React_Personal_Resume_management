@@ -13,7 +13,7 @@ function MenusettingRetrive() {
 
   const fetchMenusettingList = () => {
     axios
-      .get("http://localhost:8080/api/v1/menu/menusetting")
+      .get("http://localhost:8080/menu-setting")
       .then(function (response) {
         setMenusettingList(response.data);
       })
@@ -40,7 +40,7 @@ function MenusettingRetrive() {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:8080/api/v1/menu/menusetting/${id}`)
+          .delete(`http://localhost:8080/menu-setting/${id}`)
           .then(function (response) {
             Swal.fire({
               icon: "success",
