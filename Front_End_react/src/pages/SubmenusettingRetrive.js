@@ -13,7 +13,7 @@ function SubmenusettingRetrive() {
 
   const fetchSubmenusettingList = () => {
     axios
-      .get("http://localhost:8080/api/v1/submenu/submenusetting")
+      .get("http://localhost:8080/submenusetting")
       .then(function (response) {
         setSubmenusettingList(response.data);
       })
@@ -34,7 +34,7 @@ function SubmenusettingRetrive() {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:8080/api/v1/submenu/submenusetting/${id}`)
+          .delete(`http://localhost:8080/submenusetting/${id}`)
           .then(function (response) {
             Swal.fire({
               icon: "success",

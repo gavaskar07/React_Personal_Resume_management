@@ -14,9 +14,7 @@ function UsersettingView() {
 
   useEffect(() => {
     axios
-      .get(
-        `http://localhost:8080/api/personal_resume_management_system/usersetting/${id}`
-      )
+      .get(`http://localhost:8080/usersetting/${id}`)
       .then(function (response) {
         setUsersetting(response.data);
       })

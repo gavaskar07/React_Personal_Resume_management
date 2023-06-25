@@ -13,7 +13,7 @@ function Prs_projectRetrive() {
 
   const fetchPrs_projectList = () => {
     axios
-      .get("http://localhost:8080/api/v1/project/prs_project")
+      .get("http://localhost:8080/prs_project")
       .then(function (response) {
         setPrs_projectList(response.data);
       })
@@ -34,7 +34,7 @@ function Prs_projectRetrive() {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:8080/api/v1/project/prs_project/${id}`)
+          .delete(`http://localhost:8080/prs_project/${id}`)
           .then(function (response) {
             Swal.fire({
               icon: "success",

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 @RestController
 @AllArgsConstructor
-@RequestMapping("api/prs_education")
+@RequestMapping("prs_education")
 public class Prs_educationController {
     private Prs_educationService prs_educationService;
     // build create User REST API

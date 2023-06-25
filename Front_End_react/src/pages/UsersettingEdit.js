@@ -14,9 +14,7 @@ function UsersettingEdit() {
 
   useEffect(() => {
     axios
-      .get(
-        `http://localhost:8080/api/personal_resume_management_system/usersetting/${id}`
-      )
+      .get(`http://localhost:8080/usersetting/${id}`)
       .then(function (response) {
         let usersetting = response.data;
         setId(usersetting.id);
@@ -38,15 +36,12 @@ function UsersettingEdit() {
   const handleSave = () => {
     setIsSaving(true);
     axios
-      .put(
-        `http://localhost:8080/api/personal_resume_management_system/usersetting/${id}`,
-        {
-          username: username,
-          password: password,
-          email: email,
-          mobileno: mobileno,
-        }
-      )
+      .put(`http://localhost:8080/usersetting/${id}`, {
+        username: username,
+        password: password,
+        email: email,
+        mobileno: mobileno,
+      })
       .then(function (response) {
         Swal.fire({
           icon: "success",

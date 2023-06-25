@@ -16,7 +16,7 @@ function Prs_experienceEdit() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/api/v1/experience/prs_experience/${id}`)
+      .get(`http://localhost:8080/prs_experience/${id}`)
       .then(function (response) {
         let prs_experience = response.data;
         setId(prs_experience.id);
@@ -39,7 +39,7 @@ function Prs_experienceEdit() {
   const handleSave = () => {
     setIsSaving(true);
     axios
-      .put(`http://localhost:8080/api/v1/experience/prs_experience/${id}`, {
+      .put(`http://localhost:8080/prs_experience/${id}`, {
         usercode: usercode,
         companyname: companyname,
         fromdate: fromdate,

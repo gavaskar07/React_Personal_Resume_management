@@ -15,7 +15,7 @@ function Prs_educationCreate() {
   const handleSave = () => {
     setIsSaving(true);
     axios
-      .post("http://localhost:8080/api/v1/education/prs_education", {
+      .post("http://localhost:8080/prs_education", {
         usercode: usercode,
         ug: ug,
         pg: pg,

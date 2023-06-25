@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 @RestController
 @AllArgsConstructor
-@RequestMapping("api/submenu-setting")
+@RequestMapping("submenu-setting")
 public class SubmenusettingController {
     private SubmenusettingService submenusettingService;
     // build create User REST API

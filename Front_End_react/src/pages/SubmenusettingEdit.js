@@ -14,7 +14,7 @@ function SubmenusettingEdit() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/api/v1/submenu/submenusetting/${id}`)
+      .get(`http://localhost:8080/submenusetting/${id}`)
       .then(function (response) {
         let submenusetting = response.data;
         setId(submenusetting.id);
@@ -35,7 +35,7 @@ function SubmenusettingEdit() {
   const handleSave = () => {
     setIsSaving(true);
     axios
-      .put(`http://localhost:8080/api/v1/submenu/submenusetting/${id}`, {
+      .put(`http://localhost:8080/submenusetting/${id}`, {
         menucode: menucode,
         submenuname: submenuname,
         url: url,

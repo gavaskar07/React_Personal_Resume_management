@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 @RestController
 @AllArgsConstructor
-@RequestMapping("api/prs_coresprofobj")
+@RequestMapping("prs_coresprofobj")
 public class Prs_coresprofobjController {
     private Prs_coresprofobjService prs_coresprofobjService;
     // build create User REST API

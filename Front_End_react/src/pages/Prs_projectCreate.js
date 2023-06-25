@@ -15,7 +15,7 @@ function Prs_projectCreate() {
   const handleSave = () => {
     setIsSaving(true);
     axios
-      .post("http://localhost:8080/api/v1/project/prs_project", {
+      .post("http://localhost:8080/prs_project", {
         usercode: usercode,
         pname: pname,
         techused: techused,

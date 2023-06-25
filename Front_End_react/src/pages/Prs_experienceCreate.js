@@ -15,7 +15,7 @@ function Prs_experienceCreate() {
   const handleSave = () => {
     setIsSaving(true);
     axios
-      .post("http://localhost:8080/api/v1/experience/prs_experience", {
+      .post("http://localhost:8080/prs_experience", {
         usercode: usercode,
         companyname: companyname,
         fromdate: fromdate,
