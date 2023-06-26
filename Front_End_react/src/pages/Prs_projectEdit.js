@@ -16,7 +16,7 @@ function Prs_projectEdit() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/api/v1/project/prs_project/${id}`)
+      .get(`http://localhost:8080/prs_project/${id}`)
       .then(function (response) {
         let prs_project = response.data;
         setId(prs_project.id);
@@ -39,7 +39,7 @@ function Prs_projectEdit() {
   const handleSave = () => {
     setIsSaving(true);
     axios
-      .put(`http://localhost:8080/api/v1/project/prs_project/${id}`, {
+      .put(`http://localhost:8080/prs_project/${id}`, {
         usercode: usercode,
         pname: pname,
         techused: techused,

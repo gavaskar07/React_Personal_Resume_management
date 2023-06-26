@@ -13,7 +13,7 @@ function Prs_educationRetrive() {
 
   const fetchPrs_educationList = () => {
     axios
-      .get("http://localhost:8080/api/v1/education/prs_education")
+      .get("http://localhost:8080/prs_education")
       .then(function (response) {
         setPrs_educationList(response.data);
       })
@@ -34,7 +34,7 @@ function Prs_educationRetrive() {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:8080/api/v1/education/prs_education/${id}`)
+          .delete(`http://localhost:8080/prs_education/${id}`)
           .then(function (response) {
             Swal.fire({
               icon: "success",

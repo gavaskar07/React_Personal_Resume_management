@@ -13,7 +13,7 @@ function Prs_experienceRetrive() {
 
   const fetchPrs_experienceList = () => {
     axios
-      .get("http://localhost:8080/api/v1/experience/prs_experience")
+      .get("http://localhost:8080/prs_experience")
       .then(function (response) {
         setPrs_experienceList(response.data);
       })
@@ -34,9 +34,7 @@ function Prs_experienceRetrive() {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(
-            `http://localhost:8080/api/v1/experience/prs_experience/${id}`
-          )
+          .delete(`http://localhost:8080/prs_experience/${id}`)
           .then(function (response) {
             Swal.fire({
               icon: "success",

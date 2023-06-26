@@ -13,9 +13,7 @@ function UsersettingRetrive() {
 
   const fetchUsersettingList = () => {
     axios
-      .get(
-        "http://localhost:8080/api/personal_resume_management_system/usersetting"
-      )
+      .get("http://localhost:8080/usersetting")
       .then(function (response) {
         setUsersettingList(response.data);
       })
@@ -36,9 +34,7 @@ function UsersettingRetrive() {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(
-            `http://localhost:8080/api/personal_resume_management_system/usersetting/${id}`
-          )
+          .delete(`http://localhost:8080/usersetting/${id}`)
           .then(function (response) {
             Swal.fire({
               icon: "success",

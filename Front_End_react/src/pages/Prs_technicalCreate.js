@@ -14,7 +14,7 @@ function Prs_technicalCreate() {
   const handleSave = () => {
     setIsSaving(true);
     axios
-      .post("http://localhost:8080/api/v1/technical/prs_technical", {
+      .post("http://localhost:8080/prs_technical", {
         usercode: usercode,
         type: type,
         description: description,

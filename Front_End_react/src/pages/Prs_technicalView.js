@@ -13,7 +13,7 @@ function Prs_technicalView() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/api/v1/technical/prs_technical/${id}`)
+      .get(`http://localhost:8080/prs_technical/${id}`)
       .then(function (response) {
         setPrs_technical(response.data);
       })

@@ -6,9 +6,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
+@CrossOrigin
 @RestController
 @AllArgsConstructor
-@RequestMapping("api/prs_education")
+@RequestMapping("prs_education")
 public class Prs_educationController {
     private Prs_educationService prs_educationService;
     // build create User REST API

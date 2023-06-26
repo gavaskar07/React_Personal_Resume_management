@@ -15,7 +15,7 @@ function Prs_projectView() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/api/v1/project/prs_project/${id}`)
+      .get(`http://localhost:8080/prs_project/${id}`)
       .then(function (response) {
         setPrs_project(response.data);
       })

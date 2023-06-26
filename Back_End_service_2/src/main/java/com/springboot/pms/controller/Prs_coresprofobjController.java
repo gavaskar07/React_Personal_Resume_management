@@ -6,9 +6,10 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
+@CrossOrigin
 @RestController
 @AllArgsConstructor
-@RequestMapping("api/prs_coresprofobj")
+@RequestMapping("prs_coresprofobj")
 public class Prs_coresprofobjController {
     private Prs_coresprofobjService prs_coresprofobjService;
     // build create User REST API

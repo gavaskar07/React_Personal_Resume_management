@@ -13,7 +13,7 @@ function Prs_technicalRetrive() {
 
   const fetchPrs_technicalList = () => {
     axios
-      .get("http://localhost:8080/api/v1/technical/prs_technical")
+      .get("http://localhost:8080/prs_technical")
       .then(function (response) {
         setPrs_technicalList(response.data);
       })
@@ -34,7 +34,7 @@ function Prs_technicalRetrive() {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:8080/api/v1/technical/prs_technical/${id}`)
+          .delete(`http://localhost:8080/prs_technical/${id}`)
           .then(function (response) {
             Swal.fire({
               icon: "success",

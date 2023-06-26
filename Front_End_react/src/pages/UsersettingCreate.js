@@ -14,15 +14,12 @@ function UsersettingCreate() {
   const handleSave = () => {
     setIsSaving(true);
     axios
-      .post(
-        "http://localhost:8080/api/personal_resume_management_system/usersetting",
-        {
-          username: username,
-          password: password,
-          email: email,
-          mobileno: mobileno,
-        }
-      )
+      .post("http://localhost:8080/usersetting", {
+        username: username,
+        password: password,
+        email: email,
+        mobileno: mobileno,
+      })
       .then(function (response) {
         Swal.fire({
           icon: "success",

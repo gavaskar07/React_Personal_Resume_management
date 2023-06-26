@@ -15,7 +15,7 @@ function Prs_experienceView() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/api/v1/experience/prs_experience/${id}`)
+      .get(`http://localhost:8080/prs_experience/${id}`)
       .then(function (response) {
         setPrs_experience(response.data);
       })

@@ -15,7 +15,7 @@ function Prs_educationView() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/api/v1/education/prs_education/${id}`)
+      .get(`http://localhost:8080/prs_education/${id}`)
       .then(function (response) {
         setPrs_education(response.data);
       })
