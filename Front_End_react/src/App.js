@@ -5,17 +5,9 @@ import "./App.css";
 import AuthService from "./services/auth.service";
 
 import Login from "./components/login.component";
-import Register from "./components/register.component";
 
 import Home from "./components/home";
-// import Profile from "./components/profile.component";
-import BoardUser from "./components/board-user.component";
-import BoardModerator from "./components/board-moderator.component";
-import BoardAdmin from "./components/board-admin.component";
-import UsersettingCreate from "./pages/UsersettingCreate";
-import UsersettingEdit from "./pages/UsersettingEdit";
-import UsersettingView from "./pages/UsersettingView";
-import UsersettingRetrive from "./pages/UsersettingRetrive";
+
 import MenusettingRetrive from "./pages/MenusettingRetrive";
 import MenusettingCreate from "./pages/MenusettingCreate";
 import MenusettingEdit from "./pages/MenusettingEdit";
@@ -40,28 +32,13 @@ import Prs_technicalRetrive from "./pages/Prs_technicalRetrive";
 import Prs_technicalCreate from "./pages/Prs_technicalCreate";
 import Prs_technicalEdit from "./pages/Prs_technicalEdit";
 import Prs_technicalView from "./pages/Prs_technicalView";
-import SubmenusettingRetrive from "./pages/SubmenusettingRetrive";
-import SubmenusettingCreate from "./pages/SubmenusettingCreate";
-import SubmenusettingEdit from "./pages/SubmenusettingEdit";
-import SubmenusettingView from "./pages/SubmenusettingView";
+
 import axios from "axios";
 import Swal from "sweetalert2";
-// import AuthVerify from "./common/auth-verify";
 
 import EventBus from "./common/EventBus";
 const user = JSON.parse(localStorage.getItem("user"));
-
-//axios.defaults.headers.common.Authorization = "Bearer " + user.accessToken;
-//axios.defaults.baseURL = "http://localhost:8000/api/";
 if (user) {
- // axios.defaults.headers.common["Authorization"] = "Bearer " + user.accessToken;
-  //axios.defaults.headers.common.Authorization = "Bearer " + user.accessToken;
- // Swal.fire({
-   // icon: "error",
-    //title: user.accessToken,
-   // showConfirmButton: false,
-   // timer: 1500,
- // });
 }
 
 class App extends Component {
@@ -70,8 +47,6 @@ class App extends Component {
     this.logOut = this.logOut.bind(this);
 
     this.state = {
-      // showModeratorBoard: false,
-      // showAdminBoard: false,
       currentUser: undefined,
     };
   }
@@ -82,8 +57,6 @@ class App extends Component {
     if (user) {
       this.setState({
         currentUser: user,
-        //showModeratorBoard: user.roles.includes("ROLE_MODERATOR"),
-        //showAdminBoard: user.roles.includes("ROLE_ADMIN"),
       });
     }
 
@@ -99,8 +72,6 @@ class App extends Component {
   logOut() {
     AuthService.logout();
     this.setState({
-      //showModeratorBoard: false,
-      //showAdminBoard: false,
       currentUser: undefined,
     });
   }
@@ -114,20 +85,7 @@ class App extends Component {
           <Routes>
             <Route path="/" element={<Login />} />
             <Route path="/home" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            {/* <Route path="/profile" element={<Profile />} /> */}
-            <Route path="/user" element={<BoardUser />} />
-            <Route path="/mod" element={<BoardModerator />} />
-            <Route path="/admin" element={<BoardAdmin />} />
-            <Route
-              exact
-              path="/usersettingretrive"
-              element={<UsersettingRetrive />}
-            />
-            <Route path="/usersettingcreate" element={<UsersettingCreate />} />
-            <Route path="/usersettingedit/:id" element={<UsersettingEdit />} />
-            <Route path="/usersettingview/:id" element={<UsersettingView />} />
+
             <Route
               exact
               path="/menusettingretrive"
@@ -206,27 +164,8 @@ class App extends Component {
               path="/prs_technicalview/:id"
               element={<Prs_technicalView />}
             />
-            <Route
-              exact
-              path="/submenusettingretrive"
-              element={<SubmenusettingRetrive />}
-            />
-            <Route
-              path="/submenusettingcreate"
-              element={<SubmenusettingCreate />}
-            />
-            <Route
-              path="/submenusettingedit/:id"
-              element={<SubmenusettingEdit />}
-            />
-            <Route
-              path="/submenusettingview/:id"
-              element={<SubmenusettingView />}
-            />
           </Routes>
         </div>
-
-        {/* <AuthVerify logOut={this.logOut}/> */}
       </div>
     );
   }

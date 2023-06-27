@@ -83,8 +83,14 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="col-md-12">
-        <div className="card card-container">
+      <div style={{ minHeight: "100vh", backgroundColor: "#edf3f7" }}>
+        <div class="container text-center">
+          <h3>Welcome to Personal Resume Management System</h3>
+        </div>
+        <div
+          className="card card-container"
+          style={{ backgroundColor: "#cadeec" }}
+        >
           <img
             src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
             alt="profile-img"

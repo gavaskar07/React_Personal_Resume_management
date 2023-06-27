@@ -58,7 +58,7 @@ function Prs_educationRetrive() {
 
   return (
     <Layout>
-      <div className="container">
+      <div className="container" style={{ backgroundColor: "#cccdc9" }}>
         <h2 className="text-center mt-5 mb-3">Education Details </h2>
         <div className="card">
           <div className="card-header">
@@ -94,7 +94,7 @@ function Prs_educationRetrive() {
                       <td>{prs_education.sslc}</td>
 
                       <td>
-                        <Link
+                        {/* <Link
                           to={`/prs_educationview/${prs_education.id}`}
                           className="btn btn-outline-info mx-1"
                         >
@@ -105,7 +105,7 @@ function Prs_educationRetrive() {
                           to={`/prs_educationedit/${prs_education.id}`}
                         >
                           Edit
-                        </Link>
+                        </Link> */}
                         <button
                           onClick={() => handleDelete(prs_education.id)}
                           className="btn btn-outline-danger mx-1"

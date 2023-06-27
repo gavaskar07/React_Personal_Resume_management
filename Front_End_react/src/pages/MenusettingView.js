@@ -12,7 +12,7 @@ function MenusettingView() {
 
   useEffect(() => {
     axios
-      .get('http://localhost:8080/menu-setting/${id}')
+      .get(`http://localhost:8080/menu-setting/${id}`)
       .then(function (response) {
         setMenusetting(response.data);
       })
@@ -23,17 +23,17 @@ function MenusettingView() {
 
   return (
     <Layout>
-      <div className="container">
-        <h2 className="text-center mt-5 mb-3">Show Menu</h2>
+      <div className="container" style={{ backgroundColor: "#cccdc9" }}>
+        <h2 className="text-center mt-5 mb-3">Show Menu setting details</h2>
         <div className="card">
           <div className="card-header">
             <Link className="btn btn-outline-info float-right" to="/home">
               {" "}
-              View All Menus
+              View All details
             </Link>
           </div>
           <div className="card-body">
-            <b className="text-muted">Menu code:</b>
+            <b className="text-muted">Menu Code:</b>
             <p>{menusetting.menucode}</p>
             <b className="text-muted">Menu name:</b>
             <p>{menusetting.menuname}</p>

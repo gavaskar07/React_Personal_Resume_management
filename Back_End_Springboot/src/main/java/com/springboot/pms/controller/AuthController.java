@@ -1,10 +1,8 @@
 package com.springboot.pms.controller;
-import com.springboot.pms.entity.Menusetting;
 import com.springboot.pms.payload.JWTAuthResponse;
 import com.springboot.pms.payload.LoginDto;
 import com.springboot.pms.payload.RegisterDto;
 import com.springboot.pms.service.AuthService;
-import com.springboot.pms.service.MenusettingService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,10 +16,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class AuthController {
 
     private AuthService authService;
-    private MenusettingService menusettingService;
+
     public AuthController(AuthService authService) {
         this.authService = authService;
-    }
+    } //Dependency Injection
 
     // Build Login REST API
     @PostMapping(value = {"/login", "/signin"})
@@ -40,9 +38,6 @@ public class AuthController {
         String response = authService.register(registerDto);
         return new ResponseEntity<>(response, HttpStatus.CREATED);
     }
-    @PostMapping(value = {"/menusetting"})
-    public ResponseEntity<Menusetting>createmenusetting(@RequestBody Menusetting menusetting){
-        Menusetting savedmenusetting = menusettingService.mcreate(menusetting);
-        return new ResponseEntity<>(savedmenusetting, HttpStatus.CREATED);
-    }
+
+
 }

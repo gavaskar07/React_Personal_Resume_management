@@ -12,13 +12,10 @@ function MenusettingCreate() {
   const handleSave = () => {
     setIsSaving(true);
     axios
-      .post(
-        "http://localhost:8080/menu-setting",
-        {
-          menucode: menucode,
-          menuname: menuname,
-        }
-      )
+      .post("http://localhost:8080/menu-setting", {
+        menucode: menucode,
+        menuname: menuname,
+      })
       .then(function (response) {
         Swal.fire({
           icon: "success",
@@ -43,7 +40,7 @@ function MenusettingCreate() {
 
   return (
     <Layout>
-      <div className="container">
+      <div className="container" style={{ backgroundColor: "#cccdc9" }}>
         <h2 className="text-center mt-5 mb-3">Add menu details</h2>
         <div className="card">
           <div className="card-header">

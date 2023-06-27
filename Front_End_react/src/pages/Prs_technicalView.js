@@ -24,7 +24,7 @@ function Prs_technicalView() {
 
   return (
     <Layout>
-      <div className="container">
+      <div className="container" style={{ backgroundColor: "#cccdc9" }}>
         <h2 className="text-center mt-5 mb-3">Show Technical details</h2>
         <div className="card">
           <div className="card-header">

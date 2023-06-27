@@ -58,7 +58,7 @@ function Prs_experienceRetrive() {
 
   return (
     <Layout>
-      <div className="container">
+      <div className="container" style={{ backgroundColor: "#cccdc9" }}>
         <h2 className="text-center mt-5 mb-3">Experience Details </h2>
         <div className="card">
           <div className="card-header">
@@ -96,7 +96,7 @@ function Prs_experienceRetrive() {
                       <td>{prs_experience.todate}</td>
                       <td>{prs_experience.designation}</td>
                       <td>
-                        <Link
+                        {/* <Link
                           to={`/prs_experienceview/${prs_experience.id}`}
                           className="btn btn-outline-info mx-1"
                         >
@@ -107,7 +107,7 @@ function Prs_experienceRetrive() {
                           to={`/prs_experienceedit/${prs_experience.id}`}
                         >
                           Edit
-                        </Link>
+                        </Link> */}
                         <button
                           onClick={() => handleDelete(prs_experience.id)}
                           className="btn btn-outline-danger mx-1"
