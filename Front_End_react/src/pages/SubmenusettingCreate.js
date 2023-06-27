@@ -14,7 +14,7 @@ function SubmenusettingCreate() {
   const handleSave = () => {
     setIsSaving(true);
     axios
-      .post("http://localhost:8080/submenusetting", {
+      .post("http://localhost:8080/submenu-setting", {
         menucode: menucode,
         submenuname: submenuname,
         url: url,

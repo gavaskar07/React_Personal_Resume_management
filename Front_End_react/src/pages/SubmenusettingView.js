@@ -13,7 +13,7 @@ function SubmenusettingView() {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/submenusetting/${id}`)
+      .get(`http://localhost:8080/submenu-setting/${id}`)
       .then(function (response) {
         setSubmenusetting(response.data);
       })

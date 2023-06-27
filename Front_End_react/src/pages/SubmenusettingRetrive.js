@@ -34,7 +34,7 @@ function SubmenusettingRetrive() {
     }).then((result) => {
       if (result.isConfirmed) {
         axios
-          .delete(`http://localhost:8080/submenusetting/${id}`)
+          .delete(`http://localhost:8080/submenu-setting/${id}`)
           .then(function (response) {
             Swal.fire({
               icon: "success",
